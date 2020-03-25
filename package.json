@@ -1,0 +1,9 @@
+{
+  "name": "@winternet-studio/polyglot-language-switcher-2",
+  "version": "1.0.9",
+  "description": "Polyglot Language Switcher 2",
+  "main": "index.js",
+  "repository": "https://github.com/winternet-studio/polyglot-language-switcher-2",
+  "author": "Octavian R., Allan Jensen",
+  "license": "MIT"
+}
