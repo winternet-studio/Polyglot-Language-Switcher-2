@@ -154,7 +154,13 @@
             var openMode = getSetting(settings, 'openMode');
             if (openMode === 'click') {
                 $(invoker).children('a').on('click', function () {
-                    openPopup($popup, settings);
+                    if (settings._model.status === 'opening' || settings._model.status === 'closing') {
+                        // do nothing, is in the process of opening or closing
+                    } else if (settings._model.status === 'opened') {
+                        closePopup($popup, settings);
+                    } else {
+                        openPopup($popup, settings);
+                    }
                     return false;
                 });
             } else if (openMode === 'hover') {
